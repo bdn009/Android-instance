@@ -1,0 +1,82 @@
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started parent process [1]
+2026-03-11 16:43:13 | INFO     | app.logging_config             | Logging configured successfully
+2026-03-11 16:43:13 | INFO     | app.logging_config             | Logging configured successfully
+2026-03-11 16:43:13 | INFO     | app.logging_config             | Logging configured successfully
+2026-03-11 16:43:13 | INFO     | app.logging_config             | Logging configured successfully
+INFO:     Started server process [10]
+INFO:     Waiting for application startup.
+2026-03-11 16:43:13 | INFO     | main                           | 🚀 Starting Cloud Android Instance Manager
+INFO:     Started server process [11]
+INFO:     Waiting for application startup.
+2026-03-11 16:43:13 | INFO     | main                           | 🚀 Starting Cloud Android Instance Manager
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+2026-03-11 16:43:13 | INFO     | main                           | 🚀 Starting Cloud Android Instance Manager
+INFO:     Started server process [9]
+INFO:     Waiting for application startup.
+2026-03-11 16:43:13 | INFO     | main                           | 🚀 Starting Cloud Android Instance Manager
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Database initialized
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Database initialized
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Redis connected
+INFO:     Application startup complete.
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Redis connected
+INFO:     Application startup complete.
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Database initialized
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Redis connected
+INFO:     Application startup complete.
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Database initialized
+2026-03-11 16:43:13 | INFO     | main                           | ✅ Redis connected
+INFO:     Application startup complete.
+2026-03-11 16:44:32 | INFO     | app.api.auth                   | New user registered: test_register2@test.com
+2026-03-11 16:44:32 | INFO     | app.middleware                 | POST /auth/register → 201 (202.41ms)
+2026-03-11 16:44:54 | INFO     | app.api.auth                   | New user registered: ashikur@mail.com
+2026-03-11 16:44:54 | INFO     | app.middleware                 | POST /auth/register → 201 (173.13ms)
+2026-03-11 16:44:54 | INFO     | app.api.auth                   | User logged in: ashikur@mail.com
+2026-03-11 16:44:54 | INFO     | app.middleware                 | POST /auth/login → 200 (168.31ms)
+2026-03-11 16:44:54 | INFO     | app.middleware                 | GET /auth/me → 200 (3.84ms)
+INFO:     ('172.20.0.5', 51676) - "WebSocket /ws/updates?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MWNlNGQ3ZC04OTA1LTRhNmQtYTRjMC1iZmFkNDVmMmQ1ODQiLCJleHAiOjE3NzMzMzM4OTR9.2HfPn6v7notJVwdGgBPQ8ZdVvW6hny1_Zjz1IYf_ZhQ" [accepted]
+2026-03-11 16:44:54 | INFO     | app.api.streaming              | Dashboard updates WebSocket connected
+INFO:     connection open
+2026-03-11 16:44:54 | INFO     | app.middleware                 | GET /auth/me → 200 (11.23ms)
+2026-03-11 16:44:54 | INFO     | app.middleware                 | GET /instances → 200 (13.04ms)
+2026-03-11 16:45:11 | INFO     | app.api.instances              | Instance created: app 1 for user ashikur@mail.com
+2026-03-11 16:45:11 | INFO     | app.middleware                 | POST /instances/create → 201 (14.19ms)
+2026-03-11 16:45:13 | INFO     | app.services.instance_manager  | Starting instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-app-1
+2026-03-11 16:45:13 | ERROR    | app.services.instance_manager  | Error starting instance: [Errno 2] No such file or directory
+2026-03-11 16:45:13 | INFO     | app.api.instances              | Instance app 1 status: error
+2026-03-11 16:45:13 | INFO     | app.middleware                 | POST /instances/4eff378c-eb56-4c6b-abb5-ae3303789ac8/start → 200 (16.51ms)
+2026-03-11 16:45:19 | INFO     | app.services.instance_manager  | Starting instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-app-1
+2026-03-11 16:45:19 | ERROR    | app.services.instance_manager  | Error starting instance: [Errno 2] No such file or directory
+2026-03-11 16:45:19 | INFO     | app.api.instances              | Instance app 1 status: error
+2026-03-11 16:45:19 | INFO     | app.middleware                 | POST /instances/4eff378c-eb56-4c6b-abb5-ae3303789ac8/start → 200 (15.48ms)
+2026-03-11 16:45:34 | INFO     | app.api.instances              | Instance created: sfdg for user ashikur@mail.com
+2026-03-11 16:45:34 | INFO     | app.middleware                 | POST /instances/create → 201 (9.77ms)
+2026-03-11 16:46:04 | INFO     | app.services.instance_manager  | Starting instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-sfdg
+2026-03-11 16:46:04 | ERROR    | app.services.instance_manager  | Error starting instance: [Errno 2] No such file or directory
+2026-03-11 16:46:04 | INFO     | app.api.instances              | Instance sfdg status: error
+2026-03-11 16:46:04 | INFO     | app.middleware                 | POST /instances/c37c438f-ae26-4334-ace1-2411c8a768db/start → 200 (13.47ms)
+2026-03-11 17:11:43 | INFO     | app.services.instance_manager  | Starting instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-app-1
+2026-03-11 17:11:43 | ERROR    | app.services.instance_manager  | Error starting instance: [Errno 2] No such file or directory
+2026-03-11 17:11:43 | INFO     | app.api.instances              | Instance app 1 status: error
+2026-03-11 17:11:43 | INFO     | app.middleware                 | POST /instances/4eff378c-eb56-4c6b-abb5-ae3303789ac8/start → 200 (22.64ms)
+2026-03-11 17:14:09 | INFO     | app.api.apk                    | APK uploaded: base (1).apk by ashikur@mail.com
+2026-03-11 17:14:09 | INFO     | app.middleware                 | POST /apk/upload → 201 (136.15ms)
+2026-03-11 17:15:47 | INFO     | app.services.instance_manager  | Starting instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-app-1
+2026-03-11 17:15:47 | ERROR    | app.services.instance_manager  | Error starting instance: [Errno 2] No such file or directory
+2026-03-11 17:15:47 | INFO     | app.api.instances              | Instance app 1 status: error
+2026-03-11 17:15:47 | INFO     | app.middleware                 | POST /instances/4eff378c-eb56-4c6b-abb5-ae3303789ac8/start → 200 (15.94ms)
+2026-03-11 17:15:53 | INFO     | app.services.instance_manager  | Destroying instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-app-1
+2026-03-11 17:15:53 | ERROR    | app.services.instance_manager  | Error destroying instance: [Errno 2] No such file or directory
+2026-03-11 17:15:53 | INFO     | app.api.instances              | Instance app 1 deleted by ashikur@mail.com
+2026-03-11 17:15:53 | INFO     | app.middleware                 | DELETE /instances/4eff378c-eb56-4c6b-abb5-ae3303789ac8 → 204 (13.58ms)
+2026-03-11 17:15:56 | INFO     | app.services.instance_manager  | Destroying instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-sfdg
+2026-03-11 17:15:56 | ERROR    | app.services.instance_manager  | Error destroying instance: [Errno 2] No such file or directory
+2026-03-11 17:15:56 | INFO     | app.api.instances              | Instance sfdg deleted by ashikur@mail.com
+2026-03-11 17:15:56 | INFO     | app.middleware                 | DELETE /instances/c37c438f-ae26-4334-ace1-2411c8a768db → 204 (14.81ms)
+2026-03-11 17:15:59 | INFO     | app.api.instances              | Instance created: app 1 for user ashikur@mail.com
+2026-03-11 17:15:59 | INFO     | app.middleware                 | POST /instances/create → 201 (9.14ms)
+2026-03-11 17:16:01 | INFO     | app.services.instance_manager  | Starting instance: waydroid-71ce4d7d-8905-4a6d-a4c0-bfad45f2d584-app-1
+2026-03-11 17:16:01 | ERROR    | app.services.instance_manager  | Error starting instance: [Errno 2] No such file or directory
+2026-03-11 17:16:01 | INFO     | app.api.instances              | Instance app 1 status: error
+2026-03-11 17:16:01 | INFO     | app.middleware                 | POST /instances/b3d5db30-d9f8-487c-9e29-2f6631172617/start → 200 (13.94ms)

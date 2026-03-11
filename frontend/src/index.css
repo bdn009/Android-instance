@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #020617;
+    color: #f8fafc;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.08);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  }
+
+  .gradient-primary-text {
+    background: linear-gradient(135deg, #22d3ee, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-dark {
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  }
+
+  .card-glow {
+    box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.1),
+                0 4px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.3),
+                0 8px 40px rgba(6, 182, 212, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply px-6 py-2.5 rounded-xl font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    box-shadow: 0 2px 12px rgba(6, 182, 212, 0.25);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #22d3ee, #06b6d4);
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-danger {
+    @apply px-6 py-2.5 rounded-xl font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    box-shadow: 0 2px 12px rgba(239, 68, 68, 0.25);
+  }
+
+  .btn-danger:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply px-6 py-2.5 rounded-xl font-semibold transition-all duration-300;
+    background: rgba(148, 163, 184, 0.1);
+    color: #94a3b8;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(148, 163, 184, 0.2);
+    color: #f8fafc;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl bg-surface-800/50 border border-surface-600/30 
+           text-white placeholder-surface-400 focus:outline-none focus:border-primary-500/50 
+           focus:ring-2 focus:ring-primary-500/20 transition-all duration-300;
+  }
+
+  .status-running {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .status-stopped {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .status-starting {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+    border: 1px solid rgba(250, 204, 21, 0.2);
+  }
+
+  .status-error {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .device-frame {
+    @apply relative rounded-2xl overflow-hidden;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border: 2px solid rgba(148, 163, 184, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.05), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
