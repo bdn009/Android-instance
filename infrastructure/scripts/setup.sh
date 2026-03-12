@@ -40,7 +40,7 @@ echo ""
 echo "▶ Step 3: Install Waydroid"
 # Add Waydroid repository securely (modern apt approach)
 mkdir -p /etc/apt/keyrings
-curl -fsSL https://repo.waydroid.org/waydroid.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/waydroid.gpg
+curl --retry 3 --retry-all-errors -fsSL https://repo.waydroid.org/waydroid.gpg | sudo gpg --dearmor --yes -o /etc/apt/keyrings/waydroid.gpg
 echo "deb [signed-by=/etc/apt/keyrings/waydroid.gpg] https://repo.waydroid.org/ubuntu jammy main" > /etc/apt/sources.list.d/waydroid.list
 apt-get update
 apt-get install -y waydroid
