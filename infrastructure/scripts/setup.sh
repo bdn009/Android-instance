@@ -38,12 +38,17 @@ rm get-docker.sh
 
 echo ""
 echo "▶ Step 3: Install Waydroid"
-# Add Waydroid repository securely (modern apt approach)
-mkdir -p /etc/apt/keyrings
-curl --retry 3 --retry-all-errors -fsSL https://repo.waydroid.org/waydroid.gpg | sudo gpg --dearmor --yes -o /etc/apt/keyrings/waydroid.gpg
-echo "deb [signed-by=/etc/apt/keyrings/waydroid.gpg] https://repo.waydroid.org/ubuntu jammy main" > /etc/apt/sources.list.d/waydroid.list
-apt-get update
-apt-get install -y waydroid
+if ! command -v waydroid >/dev/null 2>&1; then
+    echo "Waydroid not found, installing..."
+    # Add Waydroid repository securely (modern apt approach)
+    mkdir -p /etc/apt/keyrings
+    curl --retry 3 --retry-all-errors -fsSL https://repo.waydroid.org/waydroid.gpg | sudo gpg --dearmor --yes -o /etc/apt/keyrings/waydroid.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/waydroid.gpg] https://repo.waydroid.org/ubuntu jammy main" > /etc/apt/sources.list.d/waydroid.list
+    apt-get update
+    apt-get install -y waydroid
+else
+    echo "Waydroid is already installed, skipping installation step."
+fi
 
 echo ""
 echo "▶ Step 4: Initialize Waydroid"
