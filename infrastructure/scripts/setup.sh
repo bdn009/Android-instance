@@ -28,9 +28,13 @@ apt-get install -y \
     lxc \
     android-tools-adb \
     python3-pip \
-    docker.io \
-    docker-compose-plugin \
     linux-modules-extra-$(uname -r)
+
+echo ""
+echo "▶ Step 2.5: Install Docker"
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+rm get-docker.sh
 
 echo ""
 echo "▶ Step 3: Install Waydroid"
