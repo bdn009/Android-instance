@@ -38,9 +38,10 @@ rm get-docker.sh
 
 echo ""
 echo "▶ Step 3: Install Waydroid"
-# Add Waydroid repository
-curl -s https://repo.waydroid.org/waydroid.gpg | apt-key add -
-echo "deb https://repo.waydroid.org/ubuntu jammy main" > /etc/apt/sources.list.d/waydroid.list
+# Add Waydroid repository securely (modern apt approach)
+mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.waydroid.org/waydroid.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/waydroid.gpg
+echo "deb [signed-by=/etc/apt/keyrings/waydroid.gpg] https://repo.waydroid.org/ubuntu jammy main" > /etc/apt/sources.list.d/waydroid.list
 apt-get update
 apt-get install -y waydroid
 
